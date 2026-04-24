@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg:         #faf6f0;
+  --bg2:        #f2ebe0;
+  --sidebar-bg: #f5efe5;
+  --header-bg:  #231a14;
+  --text:       #231a14;
+  --text2:      #7a6555;
+  --text3:      #b0a090;
+  --border:     #e8ddd0;
+  --accent:     #e06848;
+  --amber:      #f0a038;
+  --radius:     12px;
+  --card-shadow: 0 2px 12px rgba(35,26,20,0.07), 0 1px 3px rgba(35,26,20,0.05);
+  --sidebar-w:  200px;
+  --header-h:   64px;
+
+  /* legacy aliases used in a few places */
+  --text-h:     #231a14;
+  --code-bg:    #f2ebe0;
+  --accent-bg:  rgba(224,104,72,0.1);
+  --accent-border: rgba(224,104,72,0.4);
+  --sans:       'DM Sans', system-ui, sans-serif;
+  --heading:    'Playfair Display', Georgia, serif;
+  --mono:       ui-monospace, Consolas, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+#root { width: 100%; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
+
+h1, h2, h3 { font-family: var(--heading); font-weight: 600; color: var(--text); margin: 0; }
+p  { margin: 0; }
+
+button { font-family: var(--sans); cursor: pointer; border: none; background: none; }
+input, textarea { font-family: var(--sans); }
+
+/* Hide browser picker chrome */
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; width: 0; position: absolute; }
+input[type="time"], input[type="date"] { -webkit-appearance: none; appearance: none; }
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
