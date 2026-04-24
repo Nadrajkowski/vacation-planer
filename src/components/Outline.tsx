@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Plane, MapPin, BedDouble } from 'lucide-react';
 import type { Vacation, VacationItem } from '../types/vacation';
 import { formatDate, getDayDate } from '../utils/timeCalc';
 
@@ -69,12 +68,6 @@ export function Outline({ vacation, dayGroups, collapsed }: Props) {
                   : isFirst ? DOT_COLORS.arrival
                   : isLast  ? DOT_COLORS.departure
                   : DOT_COLORS.event;
-
-                const icon = item.kind === 'sleep'
-                  ? <BedDouble size={11} />
-                  : isFirst ? <Plane size={11} />
-                  : isLast  ? <Plane size={11} style={{ transform: 'rotate(180deg)' }} />
-                  : <MapPin size={11} />;
 
                 return (
                   <li key={item.id}>
